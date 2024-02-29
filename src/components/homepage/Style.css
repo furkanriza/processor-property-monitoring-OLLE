@@ -1,0 +1,28 @@
+.home-content {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center; /* Aligns the table horizontally to the center */
+}
+
+.custom-table {
+    border-collapse: collapse;
+    /*width: 50%;*/ /* Set the width of the table */
+}
+
+.property-name {
+    padding-right: 3em;
+    padding-bottom: 1em;
+}
+
+.property-value {
+    padding-left: 3em;
+    padding-bottom: 1em;
+}
+
+.header {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
