@@ -1,13 +1,11 @@
 {
-  "routes": [
+  "rewrites": [],
+  "headers": [
     {
-      "src": "/.well-known/pki-validation/(.*)",
-      "dest": "/public/.well-known/pki-validation/$1",
-      "headers": { "Content-Type": "text/plain" }
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/.well-known/pki-validation/68811F520CF2FFFF246AAC387B72218A.txt",
+      "headers": [
+        { "key": "Content-Disposition", "value": "attachment" }
+      ]
     }
   ]
 }
