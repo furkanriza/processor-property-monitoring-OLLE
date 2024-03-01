@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Style.css';
 import { decodeFromMorse } from '../../utils/MorseCodeUtils';
 
-function Arch() {
+function SystemDetailsViewer() {
     const [data, setData] = useState({
         checksum: '',
         data: []
@@ -25,10 +25,11 @@ function Arch() {
         // fetch all data in parallel
         Promise.all(commands.map(command => fetchData(command)))
             .then(dataArray => {
-                // Assuming setData is for CPU data, and it's the first command
+                console.log('Fetched data successfully:', dataArray); // Log the fetched data array
+                // for CPU data, and it's the first command
                 setData(dataArray[0]); // This sets the CPU data directly
 
-                // Now, process and update otherData with all other info
+                // update otherData with all other info
                 const processedData = dataArray.slice(1).reduce((acc, data, index) => {
                     // Assuming the order of commands matches the data processing order
                     const keyMap = ['arch', 'freemem', 'hostname', 'platform', 'totalmem', 'type', 'uptime'];
@@ -47,12 +48,11 @@ function Arch() {
                         property: propertyMap[keyMap[index]],
                         decodedData: decodedStr
                     };
-
                     return acc;
                 }, {});
 
                 setOtherData(processedData);
-                console.log(otherData);
+                console.log('Processed and set other data successfully:', processedData); // Log the processed other data
                 setIsDataFetched(true);
             })
             .catch(error => {
@@ -88,7 +88,7 @@ function Arch() {
     return (
         <>
 
-            {!isDataFetched && (<><div className='update-button-container'><button  className='update-button' onClick={fetchAllData}>fetch data</button></div></>)}
+            {!isDataFetched && (<><div className='update-button-container'><button className='update-button' onClick={fetchAllData}>fetch data</button></div></>)}
             {isDataFetched && (<>
                 <div className='all-info-title'>
                     <h3>System Details</h3>
@@ -165,4 +165,4 @@ function Arch() {
     );
 }
 
-export default Arch;
+export default SystemDetailsViewer;

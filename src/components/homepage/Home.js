@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Arch from '../system-components/Architecture';
+import SystemDetailsViewer from './SystemDetailsViewer';
 
 function Home() {
 
@@ -12,7 +12,7 @@ function Home() {
                 <Cpu />
             </div>*/}
             <div className='system-component'>
-                <Arch />
+                <SystemDetailsViewer />
             </div>
             <div className='system-component'>
 
