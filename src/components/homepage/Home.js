@@ -1,23 +1,17 @@
 import React from 'react';
 import Header from './Header';
-import Footer from './Footer';
-import SystemDetailsViewer from './SystemDetailsViewer';
+
+import SystemDetails from '../system-details-viewer/SystemDetails';
 
 function Home() {
 
     return (
         <div className="home-content">
-            <Header />
-            {/*<div className='system-component'>
-                <Cpu />
-            </div>*/}
-            <div className='system-component'>
-                <SystemDetailsViewer />
-            </div>
-            <div className='system-component'>
+            {/*<Header />*/}
 
-            </div>
-            <Footer />
+            <SystemDetails />
+
+           
         </div>
     );
 }

@@ -1,3 +1,5 @@
+//this algorithm taken from https://github.com/cryptii/cryptii
+
 // Morse Code mapping for each alphabet letter and digit
 export const morseCodeMap = {
     'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.', 'f': '..-.',

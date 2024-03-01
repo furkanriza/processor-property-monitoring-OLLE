@@ -4,6 +4,9 @@
   flex-direction: column;
   background-color: #282c34;
   color: white;
+  margin: 0 auto; /* centers the content */
+  padding: 0 15em 0;
+  height: 100%;
 }
 
 .App-link {
