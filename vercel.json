@@ -2,8 +2,12 @@
   "routes": [
     {
       "src": "/.well-known/pki-validation/(.*)",
-      "headers": { "Content-Type": "text/plain" },
-      "dest": "/public/.well-known/pki-validation/$1"
+      "dest": "/public/.well-known/pki-validation/$1",
+      "headers": { "Content-Type": "text/plain" }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
