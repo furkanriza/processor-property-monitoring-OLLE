@@ -1,28 +1,31 @@
-.home-content {
-    min-height: 60vh;
-    display: flex;
-    justify-content: center; /* Aligns the table horizontally to the center */
-}
-
-.custom-table {
-    border-collapse: collapse;
-    /*width: 50%;*/ /* Set the width of the table */
-}
-
-.property-name {
-    padding-right: 3em;
-    padding-bottom: 1em;
-}
-
-.property-value {
-    padding-left: 3em;
-    padding-bottom: 1em;
-}
-
-.header {
+.header,
+.footer {
     text-align: center;
+    flex-shrink: 0;
 }
 
 .footer {
-    text-align: center;
+    margin-top: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .footer {
+        margin-top: 2em;
+    }
+}
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+    margin-top: 5em;
+}
+
+/* Adjusted logo size for smaller devices */
+@media (max-width: 600px) {
+    .App-logo {
+        height: 15vmin;
+        margin-top: 1em;
+    }
 }
