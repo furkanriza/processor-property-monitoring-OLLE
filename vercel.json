@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "src": "/.well-known/pki-validation/(.*)",
+      "headers": { "Content-Type": "text/plain" },
+      "dest": "/public/.well-known/pki-validation/$1"
+    }
+  ]
+}
